@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Weather Forecasting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>THE WEATHER FORECASTING</h1>
+    <div class="search">
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button onclick="getWeather()">Get Weather</button>
+    </div>
+
+    <div class="weather-wrapper">
+      <div id="current-weather" class="section"></div>
+      <div class="air-wrapper">
+        <h2 class="airhead">Air Conditions</h2>
+        <div id="air-conditions" class="conditions"></div>
+      </div>
+    </div>
+    
+
+    
+
+    <h2>Weekly Forecast</h2>
+    <div id="weekly-forecast" class="forecast-row"></div>
+  </div>
+
+  <h2>Rainfall Prediction Graph</h2>
+  <canvas id="rainfallChart" width="400" height="200"></canvas>
+
+  <div id="rainfall-comparison">
+    <h2>🌧 Rainfall Prediction (2025 vs Past)</h2>
+    <label for="year-select">Compare with Year:</label>
+    <select id="year-select">
+      <!-- JS will fill this -->
+    </select>
+    <label for="chart-type">Chart Type:</label>
+<select id="chart-type">
+  <option value="bar">Bar</option>
+  <option value="line">Line</option>
+  <option value="scatter">Dot (Scatter)</option>
+</select>
+
+    <button onclick="fetchRainfallPrediction()">Compare</button>
+  
+    <canvas id="rainfall-chart"></canvas>
+  </div>
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

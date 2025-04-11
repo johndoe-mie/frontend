@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #031e39, #063c6b);
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #0b2a47;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00000055;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.search button {
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.location-time h2 {
+  margin: 10px 0;
+}
+
+.temperature-icon img {
+  width: 80px;
+}
+
+.conditions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.condition {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.forecast-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.forecast-card {
+  background: #16436e;
+  padding: 15px;
+  border-radius: 10px;
+  width: 130px;
+  text-align: center;
+  box-shadow: 0 0 8px #00000033;
+}
+
+.forecast-card img {
+  width: 50px;
+}
+
+/* Combine current weather and air conditions side by side */
+#current-weather,
+#air-conditions {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+}
+
+#current-weather {
+  text-align: center;
+}
+
+.airhead{
+  vertical-align: top;
+
+}
+
+#air-conditions {
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.condition {
+  margin: 10px 0;
+}
+
+/* Forecast section: make cards scroll horizontally */
+.forecast-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.forecast-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast-row::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* Prevent forecast cards from wrapping and shrinking */
+.forecast-card {
+  flex: 0 0 auto;
+}
+@media (max-width: 768px) {
+  #current-weather,
+  #air-conditions {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.weather-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.weather-wrapper > div {
+  flex: 1;
+  min-width: 320px;
+}
+
+
+
+.air-wrapper {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.forecast-card {
+  flex: 0 0 120px; /* Fixed width */
+  background: #16436e;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 8px #00000033;
+}
